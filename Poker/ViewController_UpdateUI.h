@@ -195,12 +195,12 @@
     _addPourSlider.value = 1;
     
     if (_tableData->_i本轮最大注 == _tableData->_i下注筹码数[_tableData->_i自身玩家编号]) {
-        [_checkButton setTitle:@"让牌" forState:UIControlStateNormal];
+        [_checkButton setTitle:@"Check" forState:UIControlStateNormal];
     }else  if (_tableData->_i本轮最大注 > (_tableData->_i下注筹码数[_tableData->_i自身玩家编号] + _tableData->_i手上筹码数[_tableData->_i自身玩家编号])){
         [_checkButton setTitle:@"All In" forState:UIControlStateNormal];
         _addPourSlider.hidden = YES;
     } else {
-        NSString *checkBtnText = [NSString stringWithFormat:@"跟%d",_tableData->_i本轮最大注 - _tableData->_i下注筹码数[_tableData->_i自身玩家编号]];
+        NSString *checkBtnText = [NSString stringWithFormat:@"Call %d",_tableData->_i本轮最大注 - _tableData->_i下注筹码数[_tableData->_i自身玩家编号]];
         [_checkButton setTitle:checkBtnText forState:UIControlStateNormal];
     }
     
@@ -211,7 +211,7 @@
 
 -(void)showOtherButtomButton {
     if (_tableData->_i本轮最大注 == _tableData->_i下注筹码数[_tableData->_i自身玩家编号]) {
-        _checkButtonOther.textLabel.text = @"自动让牌";
+        _checkButtonOther.textLabel.text = @"Check Auto";
     } else  if (_tableData->_i本轮最大注 > (_tableData->_i下注筹码数[_tableData->_i自身玩家编号] + _tableData->_i手上筹码数[_tableData->_i自身玩家编号])) {
         _checkButtonOther.textLabel.text = @"All In";
     } else {
@@ -219,7 +219,7 @@
             _checkButtonOther.markInOtherView.hidden = YES;
             _maxPourBefore = _tableData->_i本轮最大注;
             
-            NSString *checkBtnOtherText = [NSString stringWithFormat:@"自动跟%d",_tableData->_i本轮最大注 - _tableData->_i下注筹码数[_tableData->_i自身玩家编号]];
+            NSString *checkBtnOtherText = [NSString stringWithFormat:@"Call %d",_tableData->_i本轮最大注 - _tableData->_i下注筹码数[_tableData->_i自身玩家编号]];
             _checkButtonOther.textLabel.text = checkBtnOtherText;
         }
     }

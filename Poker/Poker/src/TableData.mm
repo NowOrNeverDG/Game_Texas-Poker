@@ -83,16 +83,16 @@ void CTableData::fuck开始比赛清场() {
 NSString* CTableData::fuck获取牌类型文本(int iPlayerNo){
     Byte FinalPokerCards[6] = {0};
     switch(fuck获取牌类型(iPlayerNo, FinalPokerCards)){
-        case 牌型_皇家同花顺:{ return @"皇家同花顺";}
-        case 牌型_同花顺:{ return @"同花顺";}
-        case 牌型_四条:{ return @"四条";}
-        case 牌型_葫芦:{ return @"葫芦";}
-        case 牌型_同花:{ return @"同花";}
-        case 牌型_顺子:{ return @"顺子";}
-        case 牌型_三条:{ return @"三条";}
-        case 牌型_两对:{ return @"两对";}
-        case 牌型_一对:{ return @"一对";}
-        case 牌型_高牌:{ return @"高牌";}
+        case 牌型_皇家同花顺:{ return @"Royal flush";}
+        case 牌型_同花顺:{ return @"Straight flush";}
+        case 牌型_四条:{ return @"Four of a kind";}
+        case 牌型_葫芦:{ return @"Full house";}
+        case 牌型_同花:{ return @"Flush";}
+        case 牌型_顺子:{ return @"Straight";}
+        case 牌型_三条:{ return @"Three of a kind";}
+        case 牌型_两对:{ return @"(Two pairs";}
+        case 牌型_一对:{ return @"One pair";}
+        case 牌型_高牌:{ return @"High card";}
     }
     return nil;
 }

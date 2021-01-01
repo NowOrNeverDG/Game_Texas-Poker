@@ -153,15 +153,15 @@
 
 }
 
+//关闭与客户端的连接
 - (IBAction)BTNClick_endSocket:(id)sender {
-    //关闭与客户端的连接
     close(g_socketServer);
 }
 
 - (IBAction)playerOnTableAction:(id)sender {
     
     
-    char csz[] = "xx1xxxx丫000001400xx牛100001500xx王200001600xx张300001700xx赵400001800";
+    char csz[] = "xx1xxxxPlR000001400xxPlR100001500xxPIR200001600xxPlR300001700xxPlR400001800";
     int iLen = (int)strlen(csz);
     csz[0] = 0;
     csz[1] = iLen - 2;
@@ -184,7 +184,7 @@
 }
 
 - (IBAction)addPlayer:(id)sender {
-    char csz[] = "xxxxx增500002000";
+    char csz[] = "xxxxxPIR500002000";
     int iLen = (int)strlen(csz);
     csz[0] = 0;
     csz[1] = iLen - 2;

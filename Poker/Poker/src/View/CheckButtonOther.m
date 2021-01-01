@@ -13,7 +13,7 @@
 -(UILabel*)textLabel {
     if (!_textLabel) {
         self.textLabel = [[UILabel alloc] init];
-        self.textLabel.text = @"自动让牌";
+        self.textLabel.text = @"Call Auto";
         self.textLabel.font = [UIFont systemFontOfSize:13];
         self.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
         self.textLabel.textAlignment = NSTextAlignmentCenter;

@@ -1,3 +1,4 @@
+//All protocol which sending to sever using C
 #import "TableData.h"
 #import "ViewController.h"
 #define BUFFER_SIZE 1024
@@ -302,7 +303,7 @@
         [_userView[cszRecvBuff[1]] endCycle];
         
         //显示弃牌，隐藏Poker
-        _userView[cszRecvBuff[1]].username.text = @"弃牌";
+        _userView[cszRecvBuff[1]].username.text = @"Fold";
         _privatePokerImgView[cszRecvBuff[1]][0].hidden = YES;
         _privatePokerImgView[cszRecvBuff[1]][1].hidden = YES;
         
@@ -324,7 +325,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         //显示操作
-        _userView[cszRecvBuff[1]].username.text = @"让牌";
+        _userView[cszRecvBuff[1]].username.text = @"Check";
         
         //判断是否收注
         [_userView[cszRecvBuff[1]] endCycle];
@@ -364,12 +365,12 @@
         
     } else if (_tableData->_i本轮最大注 == _tableData->_i下注筹码数[iPlayerNo]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _userView[iPlayerNo].username.text = @"跟注";
+            _userView[iPlayerNo].username.text = @"Call";
         });
         
     } else if (_tableData->_i本轮最大注 < _tableData->_i下注筹码数[iPlayerNo]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _userView[iPlayerNo].username.text = @"加注";
+            _userView[iPlayerNo].username.text = @"Add";
         });
     }
     

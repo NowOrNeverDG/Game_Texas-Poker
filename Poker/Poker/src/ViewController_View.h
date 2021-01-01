@@ -10,7 +10,7 @@
     
     UILabel *callButtonOtherLB = [[UILabel alloc] init];
     callButtonOtherLB.frame = CGRectMake(35, 0,85,30);
-    callButtonOtherLB.text = @"跟任何注";
+    callButtonOtherLB.text = @"Call any bet";
     callButtonOtherLB.font = [UIFont systemFontOfSize:13];
     callButtonOtherLB.lineBreakMode = NSLineBreakByCharWrapping;
     callButtonOtherLB.textAlignment = NSTextAlignmentCenter;
@@ -19,7 +19,7 @@
     //弃牌 (自己玩家回合)
     _foldButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _foldButton.frame = CGRectMake(ksboundsWidth - 130, 340, 120, 33);
-    [_foldButton setTitle:@"弃牌" forState:UIControlStateNormal];
+    [_foldButton setTitle:@"Fold" forState:UIControlStateNormal];
     [_foldButton setTintColor:[UIColor whiteColor]];
     [_foldButton setBackgroundImage:[UIImage imageNamed:@"按钮2.png"] forState:UIControlStateNormal];
     _foldButton.layer.cornerRadius = 5;
@@ -39,7 +39,7 @@
     
     UILabel *foldButtonOtherLB = [[UILabel alloc] init];
     foldButtonOtherLB.frame = CGRectMake(35, 0,85,30);
-    foldButtonOtherLB.text = @"弃牌";
+    foldButtonOtherLB.text = @"Fold";
     foldButtonOtherLB.font = [UIFont systemFontOfSize:13];
     foldButtonOtherLB.lineBreakMode = NSLineBreakByCharWrapping;
     foldButtonOtherLB.textAlignment = NSTextAlignmentCenter;

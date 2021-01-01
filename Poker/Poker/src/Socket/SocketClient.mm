@@ -42,8 +42,9 @@ int CSocketClient::ConnectServers() {//链接服务器
     //连接服务器
     struct sockaddr_in socketParameters;
     socketParameters.sin_family = AF_INET;
-    socketParameters.sin_addr.s_addr = inet_addr("192.168.0.123");
-    socketParameters.sin_port = htons(60527);
+    //socketParameters.sin_addr.s_addr = inet_addr("192.168.1.170");
+    socketParameters.sin_addr.s_addr = htonl(INADDR_ANY);
+    socketParameters.sin_port = htons(60526);
     socketParameters.sin_len = sizeof(socketParameters);
     //connect(socket描述符、属性结构体、结构体长度)
     int iTmp = connect(_socketServer, (struct sockaddr *) &socketParameters, sizeof(socketParameters));
@@ -70,8 +71,8 @@ int CSocketClient::ConnectLocalHost() {//链接服务器
     //连接服务器
     struct sockaddr_in socketParameters;
     socketParameters.sin_family = AF_INET;
-    socketParameters.sin_addr.s_addr = inet_addr("192.168.0.102");
-    socketParameters.sin_port = htons(60527);
+    socketParameters.sin_addr.s_addr = inet_addr("192.168.1.170");
+    socketParameters.sin_port = htons(60526);
     socketParameters.sin_len = sizeof(socketParameters);
     //connect(socket描述符、属性结构体、结构体长度)
     int iTmp = connect(_socketServer, (struct sockaddr *) &socketParameters, sizeof(socketParameters));

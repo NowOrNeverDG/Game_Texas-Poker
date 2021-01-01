@@ -1,3 +1,4 @@
+//load all view on screen
 #import "ViewController.h"
 #import "ViewController_SetViewPos.h"
 
@@ -65,13 +66,6 @@ enum enum_buttonStatus {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.view addSubview:self.poolBGView];
     });
-        // 初始化
-//    self.notifications = [[NSMutableArray alloc] init];
-//    self.notificationLock = [[NSLock alloc] init];
-//    
-//    self.notificationThread = [NSThread currentThread];
-//    self.notificationPort = [[NSMachPort alloc] init];
-//    self.notificationPort.delegate = self;    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -83,10 +77,10 @@ enum enum_buttonStatus {
     [self.view addSubview:backgroundImgView];
     
     //创建各子视图
-    [self setTopMenu];          //设置顶部的两个菜单
-    //[self setVideoPlayer];    //设置播放器
-    [self setAddPourSlider];     //设置跟注条
-    [self setBottomButton];     //设置底部按钮
+    [self setTopMenu];         //设置顶部的两个菜单
+  //[self setVideoPlayer];     //设置播放器
+    [self setAddPourSlider];   //设置跟注条
+    [self setBottomButton];    //设置底部按钮
     
     for (int i = 0; i < 5; i++) {
         //创建5个边池的View
@@ -145,7 +139,7 @@ enum enum_buttonStatus {
         _movingChipView[i] = [[UIImageView alloc] init];
         _movingChipView[i].frame = CGRectMake(-100, -100, 15, 15);
         _movingChipView[i].image = [UIImage imageNamed:@"筹码1.png"];
-//        _movingChipView[i].hidden = YES;
+      //_movingChipView[i].hidden = YES;
         
         [self.view addSubview:_userView[i]];
         [self.view addSubview:_pourView[i]];
