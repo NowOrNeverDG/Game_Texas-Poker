@@ -53,7 +53,7 @@
     if (!_confirmButton) {
         _confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _confirmButton.frame = CGRectMake(0, 18, 40, 20);
-        [_confirmButton setTitle:@"确定" forState:UIControlStateNormal];
+        [_confirmButton setTitle:@"Comfirmed" forState:UIControlStateNormal];
         _confirmButton.titleLabel.font = [UIFont systemFontOfSize: 10.0];
         [_confirmButton setTitleColor:[UIColor whiteColor]forState:UIControlStateNormal];
         _confirmButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
